@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Empowering the Nation</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .venue-card {
+            background-color: var(--white);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+        
+        .venue-info {
+            padding: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-icon {
+            background-color: var(--bg-lighter);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background-color: var(--bg-lighter);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="/_images/logo.jpg" alt="Empowering the Nation" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-title">Empowering the Nation</div>
+                        <div class="logo-subtitle">Skills Training Since 2022</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="six-month-courses.html" class="nav-link">Six-Month</a>
+                    <a href="six-week-courses.html" class="nav-link">Six-Week</a>
+                    <a href="calculator.html" class="nav-link">Fee Calculator</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div style="max-width: 768px; margin: 0 auto; text-align: center;">
+                <h1 style="color: var(--dark-green); margin-bottom: 1rem;">Contact Us</h1>
+                <p style="font-size: 1.125rem; color: var(--text-gray);">
+                    Get in touch with us to learn more about our courses or to register for training.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section style="padding: 0 0 3rem; background-color: var(--white);">
+        <div class="container">
+            <div style="max-width: 768px; margin: 0 auto 3rem;">
+                <div style="background: linear-gradient(135deg, var(--dark-green), #1f4438); color: var(--white); border-radius: 0.75rem; padding: 2rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="background-color: rgba(255, 255, 255, 0.2); padding: 0.75rem; border-radius: 0.5rem;">
+                                📞
+                            </div>
+                            <div>
+                                <div style="margin-bottom: 0.25rem;">General Enquiries</div>
+                                <div style="color: var(--bg-lighter);">011 123 4567</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="background-color: rgba(255, 255, 255, 0.2); padding: 0.75rem; border-radius: 0.5rem;">
+                                ✉️
+                            </div>
+                            <div>
+                                <div style="margin-bottom: 0.25rem;">Email Us</div>
+                                <div style="color: var(--bg-lighter);">info@empoweringthenation.co.za</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venues -->
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 style="text-align: center; color: var(--dark-green); margin-bottom: 3rem;">Our Training Venues</h2>
+                
+                <!-- Sandton Campus -->
+                <div class="venue-card">
+                    <div class="venue-info">
+                        <div class="badge">Campus 1</div>
+                        <h2 style="color: var(--dark-green); margin: 1rem 0 1.5rem;">Sandton Campus</h2>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Address</div>
+                                <div style="color: var(--text-dark);">123 Rivonia Road, Sandton, Johannesburg, 2196</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Phone</div>
+                                <div style="color: var(--text-dark);">011 234 5678</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Email</div>
+                                <div style="color: var(--text-dark);">sandton@empoweringthenation.co.za</div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; background-color: var(--bg-lighter); border-radius: 0.5rem;">
+                            <div style="color: var(--text-gray); font-size: 0.875rem; margin-bottom: 0.5rem;">Operating Hours:</div>
+                            <div style="color: var(--dark-green);">Monday - Friday: 8:00 AM - 5:00 PM</div>
+                            <div style="color: var(--dark-green);">Saturday: 9:00 AM - 1:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14328.742733305457!2d28.0473!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sSandton%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Soweto Campus -->
+                <div class="venue-card">
+                    <div class="venue-info">
+                        <div class="badge">Campus 2</div>
+                        <h2 style="color: var(--dark-green); margin: 1rem 0 1.5rem;">Soweto Campus</h2>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Address</div>
+                                <div style="color: var(--text-dark);">456 Vilakazi Street, Orlando West, Soweto, 1804</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Phone</div>
+                                <div style="color: var(--text-dark);">011 345 6789</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Email</div>
+                                <div style="color: var(--text-dark);">soweto@empoweringthenation.co.za</div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; background-color: var(--bg-lighter); border-radius: 0.5rem;">
+                            <div style="color: var(--text-gray); font-size: 0.875rem; margin-bottom: 0.5rem;">Operating Hours:</div>
+                            <div style="color: var(--dark-green);">Monday - Friday: 8:00 AM - 5:00 PM</div>
+                            <div style="color: var(--dark-green);">Saturday: 9:00 AM - 1:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14358.742733305457!2d27.8546!3d-26.2309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959c4f5f4c9b67%3A0x2b1f3f5e8f5c5e8c!2sSoweto%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Alexandra Campus -->
+                <div class="venue-card">
+                    <div class="venue-info">
+                        <div class="badge">Campus 3</div>
+                        <h2 style="color: var(--dark-green); margin: 1rem 0 1.5rem;">Alexandra Campus</h2>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Address</div>
+                                <div style="color: var(--text-dark);">789 Main Road, Alexandra, Johannesburg, 2090</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Phone</div>
+                                <div style="color: var(--text-dark);">011 456 7890</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Email</div>
+                                <div style="color: var(--text-dark);">alexandra@empoweringthenation.co.za</div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; background-color: var(--bg-lighter); border-radius: 0.5rem;">
+                            <div style="color: var(--text-gray); font-size: 0.875rem; margin-bottom: 0.5rem;">Operating Hours:</div>
+                            <div style="color: var(--dark-green);">Monday - Friday: 8:00 AM - 5:00 PM</div>
+                            <div style="color: var(--dark-green);">Saturday: 9:00 AM - 1:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14318.742733305457!2d28.0987!3d-26.1043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957307c8a9e693%3A0x7f5f9e8c9e8c9e8c!2sAlexandra%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/_images/logo.jpg" alt="Empowering the Nation">
+                        <span>Empowering the Nation</span>
+                    </div>
+                    <p class="footer-desc">
+                        Providing quality skills training to empower individuals and transform communities since 2022.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="six-month-courses.html">Six-Month Courses</a></li>
+                        <li><a href="six-week-courses.html">Six-Week Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul class="footer-links">
+                        <li><a href="calculator.html">Fee Calculator</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📞 011 123 4567</p>
+                    <p>✉️ info@empoweringthenation.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

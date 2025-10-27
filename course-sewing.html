@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewing - Empowering the Nation</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .course-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .course-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-box {
+            background-color: var(--white);
+            border: 2px solid var(--light-green);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .content-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .content-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .course-detail-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="/_images/logo.jpg" alt="Empowering the Nation" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-title">Empowering the Nation</div>
+                        <div class="logo-subtitle">Skills Training Since 2022</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="six-month-courses.html" class="nav-link active">Six-Month </a>
+                    <a href="six-week-courses.html" class="nav-link">Six-Week </a>
+                    <a href="calculator.html" class="nav-link">Fee Calculator</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Detail -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <a href="six-month-courses.html" class="btn btn-secondary" style="margin-bottom: 2rem; display: inline-flex;">
+                ← Back to Six-Month Programmes
+            </a>
+
+            <div class="course-detail-grid">
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <img src="/_images/sewing.jpg.webp" 
+                         alt="Sewing" 
+                         style="width: 100%; border-radius: 0.75rem; box-shadow: var(--shadow-lg); margin-bottom: 1.5rem;">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="info-box">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⏱️</div>
+                            <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Duration</div>
+                            <div style="color: var(--dark-green); font-weight: 600;">6 months (12 weeks)</div>
+                        </div>
+                        <div class="info-box">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+                            <div style="font-size: 0.875rem; color: var(--text-gray); margin-bottom: 0.25rem;">Course Fee</div>
+                            <div style="color: var(--dark-green); font-weight: 600;">R1,500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <div class="badge" style="margin-bottom: 1rem;">Six-Month Programme</div>
+                    <h1 style="color: var(--dark-green); margin-bottom: 1.5rem;">Sewing</h1>
+
+                    <!-- Purpose -->
+                    <div style="background-color: var(--white); border: 2px solid var(--light-green); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;">
+                        <h3 style="color: var(--dark-green); margin-bottom: 1rem;">Course Purpose</h3>
+                        <p style="color: var(--text-gray);">
+                            To provide alterations and new garment tailoring
+                        </p>
+                    </div>
+
+                    <!-- Content -->
+                    <div style="background-color: var(--white); border: 2px solid var(--light-green); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;">
+                        <h3 style="color: var(--dark-green); margin-bottom: 1.5rem;">What You'll Learn</h3>
+                        <ul class="content-list">
+                            <li>
+                                <span style="color: var(--light-green); font-size: 1.25rem;">✓</span>
+                                <span style="color: var(--text-gray);">Types of stitches</span>
+                            </li>
+                            <li>
+                                <span style="color: var(--light-green); font-size: 1.25rem;">✓</span>
+                                <span style="color: var(--text-gray);">Threading a sewing machine</span>
+                            </li>
+                            <li>
+                                <span style="color: var(--light-green); font-size: 1.25rem;">✓</span>
+                                <span style="color: var(--text-gray);">Sewing buttons,hems,zips and seams</span>
+                            </li>
+                            <li>
+                                <span style="color: var(--light-green); font-size: 1.25rem;">✓</span>
+                                <span style="color: var(--text-gray);">Alterations</span>
+                            </li>
+                            <li>
+                                <span style="color: var(--light-green); font-size: 1.25rem;">✓</span>
+                                <span style="color: var(--text-gray);">Designing and sewing garments</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                        <a href="calculator.html" class="btn btn-primary btn-large">
+                            Enroll in This Course
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-large">
+                            Contact Us
+                        </a>
+                    </div>
+
+                    <!-- Discount Info -->
+                    <div style="background: linear-gradient(135deg, #fef9ec, #fff5d6); border: 2px solid var(--gold); border-radius: 0.75rem; padding: 1.5rem;">
+                        <div style="color: var(--dark-green); font-weight: 600; margin-bottom: 0.5rem;">💰 Multiple Course Discount</div>
+                        <p style="color: var(--text-gray); margin-bottom: 0;">
+                            Save up to 15% when you enroll in multiple courses! Use our fee calculator to see exactly 
+                            how much you can save.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/_images/logo.jpg" alt="Empowering the Nation">
+                        <span>Empowering the Nation</span>
+                    </div>
+                    <p class="footer-desc">
+                        Providing quality skills training to empower individuals and transform communities since 2022.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="six-month-courses.html">Six-Month Courses</a></li>
+                        <li><a href="six-week-courses.html">Six-Week Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul class="footer-links">
+                        <li><a href="calculator.html">Fee Calculator</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📞 011 123 4567</p>
+                    <p>✉️ info@empoweringthenation.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

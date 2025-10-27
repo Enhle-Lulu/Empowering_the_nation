@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Calculator - Empowering the Nation</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        .checkbox-group:hover {
+            background-color: var(--bg-light);
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 0.25rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-label {
+            flex: 1;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .course-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .course-section-title {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .quote-card {
+            background-color: var(--white);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .selected-course {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quote-section {
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 1rem;
+        }
+        
+        .quote-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quote-total {
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .discount-info {
+            background-color: var(--bg-lighter);
+            border: 1px solid var(--light-green);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="/_images/logo.jpg" alt="Empowering the Nation" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-title">Empowering the Nation</div>
+                        <div class="logo-subtitle">Skills Training Since 2022</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="six-month-courses.html" class="nav-link">Six-Month</a>
+                    <a href="six-week-courses.html" class="nav-link">Six-Week</a>
+                    <a href="calculator.html" class="nav-link active">Fee Calculator</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calculator Section -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <!-- Header -->
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background-color: var(--bg-lighter); border-radius: 1rem; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem;">🧮</span>
+                    </div>
+                    <h1 style="color: var(--dark-green); margin-bottom: 1rem;">Fee Calculator</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-gray);">
+                        Calculate your course fees and see how much you can save with multiple course discounts!
+                    </p>
+                </div>
+
+                <div class="calculator-grid">
+                    <!-- Form Section -->
+                    <div>
+                        <div style="background-color: var(--white); border-radius: 0.75rem; padding: 2rem; box-shadow: var(--shadow);">
+                            <h3 style="color: var(--dark-green); margin-bottom: 1.5rem;">Your Information</h3>
+                            
+                            <form id="calculatorForm">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" id="name" class="form-input" required>
+                                    <div id="nameError" class="error-message"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number *</label>
+                                    <input type="tel" id="phone" class="form-input" placeholder="0123456789" required>
+                                    <div id="phoneError" class="error-message"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" id="email" class="form-input" required>
+                                    <div id="emailError" class="error-message"></div>
+                                </div>
+
+                                <h3 style="color: var(--dark-green); margin: 2rem 0 1.5rem;">Select Courses *</h3>
+                                
+                                <div class="course-section">
+                                    <div class="course-section-title">Six-Month Courses (R1,500 each)</div>
+                                    <div class="course-checkboxes">
+                                        <input type="checkbox" id="course_First_Aid" name="course" value="1500" data-name="First Aid">
+                                        <label for="course_First_Aid">First Aid</label><br>
+                                        <input type="checkbox" id="course_Sewing" name="course" value="1500" data-name="Sewing">
+                                        <label for="course_Sewing">Sewing</label><br>
+                                        <input type="checkbox" id="course_Landscaping" name="course" value="1500" data-name="Landscaping">
+                                        <label for="course_Landscaping">Landscaping</label><br>
+                                        <input type="checkbox" id="course_Life_Skills" name="course" value="1500" data-name="Life Skills">
+                                        <label for="course_Life_Skills" >Life Skills</label><br>
+                                    </div>
+                                    <div id="sixMonthCourses"></div>
+                                </div>
+
+                                <div class="course-section">
+                                    <div class="course-section-title">Six-Week Courses (R750 each)</div>
+                                    <div class="course-checkboxes">
+                                        <input type="checkbox" id="course_Child_Minding" name="course" value="750" data-name="Child Minding">
+                                        <label for="course_Child_Minding">Child Minding</label><br>
+                                        <input type="checkbox" id="course_Cooking" name="course" value="750" data-name="Cooking">
+                                        <label for="course_Cooking">Cooking</label><br>
+                                        <input type="checkbox" id="course_Garden_Maintenance" name="course" value="750" data-name="Garden Maintenance">
+                                        <label for="course_Garden_Maintenance">Garden Maintenance</label><br>
+                                    </div>
+                                    <div id="sixWeekCourses"></div>
+                                </div>
+
+                                <div id="coursesError" class="error-message"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Quote Section -->
+                    <div>
+                        <div class="quote-card">
+                            <h3 style="color: var(--dark-green); margin-bottom: 1rem;">Fee Quote</h3>
+                            
+                            <div id="quoteContent">
+                                <div style="text-align: center; padding: 3rem 1rem; color: var(--text-gray);">
+                                    <div style="font-size: 3rem; margin-bottom: 1rem;">🧮</div>
+                                    <p>Select courses and click 'Generate Quote'</p>
+                                </div>
+                            </div>
+
+                            <div class="discount-info">
+                                <div style="margin-bottom: 0.5rem;">💰 <strong>Discount Tiers:</strong></div>
+                                <div style="margin-left: 1.5rem;">
+                                    <div>2 courses: 5% discount</div>
+                                    <div>3 courses: 10% discount</div>
+                                    <div>4+ courses: 15% discount</div>
+                                </div>
+                            </div>
+
+                            <button type="button" id="calculateBtn" class="btn btn-primary btn-full" style="margin-bottom: 0.75rem;">
+                                🧮 Generate Quote
+                            </button>
+                            <button type="button" id="resetBtn" class="btn btn-secondary btn-full">
+                                Reset Form
+                            </button>
+
+                            <div id="successMessage" class="alert alert-success" style="display: none; margin-top: 1rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/_images/logo.jpg" alt="Empowering the Nation">
+                        <span>Empowering the Nation</span>
+                    </div>
+                    <p class="footer-desc">
+                        Providing quality skills training to empower individuals and transform communities since 2022.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="six-month-courses.html">Six-Month Courses</a></li>
+                        <li><a href="six-week-courses.html">Six-Week Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul class="footer-links">
+                        <li><a href="calculator.html">Fee Calculator</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📞 011 123 4567</p>
+                    <p>✉️ info@empoweringthenation.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/calculator.js"></script>
+</body>
+</html>

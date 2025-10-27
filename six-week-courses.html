@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six-Week Courses - Empowering the Nation</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="/_images/logo.jpg" alt="Empowering the Nation" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-title">Empowering the Nation</div>
+                        <div class="logo-subtitle">Skills Training Since 2022</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="six-month-courses.html" class="nav-link">Six-Month</a>
+                    <a href="six-week-courses.html" class="nav-link active">Six-Week</a>
+                    <a href="calculator.html" class="nav-link">Fee Calculator</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div style="max-width: 768px; margin: 0 auto; text-align: center;">
+                <div class="badge">6 Weeks</div>
+                <h1 style="color: var(--dark-green); margin-bottom: 1rem;">Six-Week Short Courses</h1>
+                <p style="font-size: 1.125rem; color: var(--text-gray);">
+                    Focused, intensive training courses designed to quickly build specific skills. These short 
+                    courses run for 6 weeks and are perfect for those who want to add specialized skills to their repertoire.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section style="padding: 3rem 0; background-color: var(--white);">
+        <div class="container">
+            <div class="course-grid">
+                <!-- Child Minding -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1544772711-57da9c7368fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Child Minding">
+                        <div class="course-price-badge">R750</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Child Minding</h3>
+                        <p>To provide basic child and baby care</p>
+                        <div class="course-meta">
+                            <span class="course-meta-item">⏱️ 6 weeks</span>
+                            <span class="course-meta-item">💰 R750</span>
+                        </div>
+                        <a href="course-child-minding.html" class="btn btn-primary btn-full">View Course Details →</a>
+                    </div>
+                </div>
+
+                <!-- Cooking -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1556929361-bb46fb0b4e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Cooking">
+                        <div class="course-price-badge">R750</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cooking</h3>
+                        <p>To prepare and cook nutritious family meals</p>
+                        <div class="course-meta">
+                            <span class="course-meta-item">⏱️ 6 weeks</span>
+                            <span class="course-meta-item">💰 R750</span>
+                        </div>
+                        <a href="course-cooking.html" class="btn btn-primary btn-full">View Course Details →</a>
+                    </div>
+                </div>
+
+                <!-- Garden Maintenance -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1760958932736-2c80ef43d9b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Garden Maintenance">
+                        <div class="course-price-badge">R750</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Garden Maintenance</h3>
+                        <p>To provide basic knowledge of watering, pruning and planting in a domestic garden</p>
+                        <div class="course-meta">
+                            <span class="course-meta-item">⏱️ 6 weeks</span>
+                            <span class="course-meta-item">💰 R750</span>
+                        </div>
+                        <a href="course-garden-maintenance.html" class="btn btn-primary btn-full">View Course Details →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="max-width: 768px; margin: 4rem auto 0; text-align: center;">
+                <div style="background: linear-gradient(135deg, var(--dark-green), #1f4438); color: var(--white); border-radius: 0.75rem; padding: 2rem;">
+                    <h3 style="color: var(--white); margin-bottom: 1rem;">Multiple Course Discounts Available!</h3>
+                    <p style="font-size: 1.125rem; color: var(--bg-lighter); margin-bottom: 1.5rem;">
+                        Save up to 15% when you enroll in multiple courses. Use our fee calculator to see your savings.
+                    </p>
+                    <a href="calculator.html" class="btn btn-gold btn-large">
+                        Calculate Your Fees
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/_images/logo.jpg" alt="Empowering the Nation">
+                        <span>Empowering the Nation</span>
+                    </div>
+                    <p class="footer-desc">
+                        Providing quality skills training to empower individuals and transform communities since 2022.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="six-month-courses.html">Six-Month Courses</a></li>
+                        <li><a href="six-week-courses.html">Six-Week Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul class="footer-links">
+                        <li><a href="calculator.html">Fee Calculator</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📞 011 123 4567</p>
+                    <p>✉️ info@empoweringthenation.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
